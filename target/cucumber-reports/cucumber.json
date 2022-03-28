@@ -1,0 +1,336 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-03-28T15:21:13.549Z",
+        "line": 4,
+        "name": "GET all posts",
+        "description": "",
+        "id": "posts-and-comments-api-calls;get-all-posts",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1608510100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a GET call is made to \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aGETCallIsMadeTo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1990000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "a 200 status code is returned",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 2
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aStatusCodeIsReturned(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-03-28T15:21:15.211Z",
+        "line": 8,
+        "name": "POST a new post",
+        "description": "",
+        "id": "posts-and-comments-api-calls;post-a-new-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 34998400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "a json payload \"newPost.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"newPost.json\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aJsonPayload(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 257405600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "a POST call is made to \"https://jsonplaceholder.typicode.com/posts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aPOSTCallIsMadeTo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "a 201 status code is returned",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 2
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aStatusCodeIsReturned(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 28999500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the response body contains an id",
+            "match": {
+              "location": "stepDefinitions.SampleTestSteps.theResponseBodyContainsAnId()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-03-28T15:21:15.540Z",
+        "line": 14,
+        "name": "GET post\u0027s comments",
+        "description": "",
+        "id": "posts-and-comments-api-calls;get-post-s-comments",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 192630400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "a GET call is made to \"https://jsonplaceholder.typicode.com/posts/3/comments\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts/3/comments\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aGETCallIsMadeTo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "a 200 status code is returned",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 2
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aStatusCodeIsReturned(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1002000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the response contains 5 comments",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.theResponseContainsComments(int)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-03-28T15:21:15.739Z",
+        "line": 19,
+        "name": "PATCH post title and body",
+        "description": "",
+        "id": "posts-and-comments-api-calls;patch-post-title-and-body",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4997300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "a json payload \"patchPost.json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"patchPost.json\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aJsonPayload(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 182197800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "a PATCH call is made to \"https://jsonplaceholder.typicode.com/posts/99\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://jsonplaceholder.typicode.com/posts/99\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aPATCHCallIsMadeTo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "a 200 status code is returned",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 2
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.aStatusCodeIsReturned(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 999900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the \"title\" equals \"New Test Title\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"New Test Title\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.theEquals(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the \"body\" equals \"New Sample Body\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"body\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"New Sample Body\"",
+                  "offset": 18
+                }
+              ],
+              "location": "stepDefinitions.SampleTestSteps.theEquals(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Posts and Comments API calls",
+    "description": "",
+    "id": "posts-and-comments-api-calls",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/SampleTest.feature",
+    "tags": [
+      {
+        "name": "@Regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
